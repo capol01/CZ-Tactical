@@ -185,3 +185,21 @@ footer {
     transform: translateY(0);
   }
 }
+.gallery{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.gallery-image{
+  width:100%;
+  max-width:700px;
+  border-radius:12px;
+}
+
+.gallery button{
+  font-size:24px;
+  padding:15px;
+}
