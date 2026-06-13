@@ -35,19 +35,28 @@ function showAdmin() {
 }
 
 window.addProduct = async function () {
+
   const name = document.getElementById("name").value;
   const price = document.getElementById("price").value;
   const stock = document.getElementById("stock").value;
   const category = document.getElementById("category").value;
+
+  const description = document.getElementById("description").value;
+
   const image = document.getElementById("image").value;
+  const image2 = document.getElementById("image2").value;
+  const image3 = document.getElementById("image3").value;
 
   const { error } = await supabase.from("products").insert([
     {
       name,
       price,
       stock,
+      description,
       category,
       image_url: image,
+      image2_url: image2,
+      image3_url: image3,
       visible: true,
     },
   ]);
@@ -59,7 +68,6 @@ window.addProduct = async function () {
     loadProducts();
   }
 };
-
 async function loadProducts() {
   const container = document.getElementById("admin-products");
 
