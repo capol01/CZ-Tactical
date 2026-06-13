@@ -55,13 +55,33 @@ nav a:hover {
   padding: 40px;
 }
 
-.products h3 {
+.products h2 {
   margin-bottom: 20px;
 }
 
+/* FILTRY */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filters input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.filters button {
+  padding: 10px 15px;
+}
+
+/* PRODUKTY */
+
 #product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -75,7 +95,7 @@ nav a:hover {
 
 .product:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(88,166,255,.2);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
 }
 
 .product img {
@@ -94,6 +114,8 @@ nav a:hover {
   color: #c9d1d9;
 }
 
+/* TLAČÍTKA */
+
 button {
   background: #238636;
   color: white;
@@ -101,12 +123,14 @@ button {
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #2ea043;
 }
+
+/* ADMIN */
 
 .login-box,
 .admin-panel {
@@ -120,7 +144,8 @@ button:hover {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -130,15 +155,24 @@ select {
   border-radius: 8px;
 }
 
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 .hidden {
   display: none;
 }
+
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 30px;
   color: #8b949e;
 }
+
+/* ANIMACE */
 
 @keyframes fadeIn {
   from {
